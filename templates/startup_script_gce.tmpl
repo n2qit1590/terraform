@@ -1,0 +1,4 @@
+#!bin/bash -eu
+sudo apt-get update
+sudo apt-get install apache2 -y 
+echo '<!doctype html><html><body><h1>Test terraform!</h1></body></html>' | sudo tee /var/www/html/index.html
