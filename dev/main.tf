@@ -5,10 +5,10 @@ module "ft-web" {
   firewall_name = "tf-web-server-fw"
 }
 
-module "vm-nodejs" {
+module "vm-nginx" {
   source = "../modules/"
-  instance_name = "vm-nodejs-test"
-  startup_script = "sudo apt-get update && sudo apt-get install php8.0 -y"
-  firewall_name = "nodejs-fw"
+  instance_name = "vm-nginx-test"
+  startup_script = "sudo apt-get update && sudo apt-get install nginx -y"
+  firewall_name = "nginx-fw"
 }
 
